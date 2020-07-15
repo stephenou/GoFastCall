@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GoFastCall</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background: #FCFFFE;
+                font-family: system-ui, sans-serif;
+                text-align: center;
+            }
+            main {
+                width: 600px;
+                margin: auto;
+            }
+            a {
+                color: #33CC99;
+            }
+            a:hover {
+                color: #44DDAA;
+            }
+            a:active {
+                color: #22BB88;
+            }
+            h1 {
+                margin: 36px 0 24px;
+                font-size: 32px;
+                line-height: 16px;
+            }
+            h1 img {
+                width: 48px;
+                height: 48px;
+                margin: 0 16px -12px 0;
+            }
+            h1 a {
+                text-decoration: none;
+            }
+            h2 {
+                font-size: 16px;
+                font-weight: normal;
+                color: #666;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            h4 {
+                font-size: 18px;
+                margin: 6px 0 15px;
+            }
+            summary > div {
+                font-size: 16px;
+                margin-top: 36px;
+                padding: 16px;
+                background: #F0FFF9;
+                border: 1px solid #CCFFEE;
+                border-radius: 8px;
+            }
+            .table .tr {
+                height: 35px;
+                    display: flex;
+            }
+            .table .tr .th {
+                width: 160px;
+                padding: 8px;
+                font-weight: bold;
+                text-align: left;
+            }
+            .table .tr .td {
+                width: 406px;
+                padding: 8px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: left;
+            }
+            .buttons {
+                margin: 36px 0;
+                color: #666;
+            }
+            button {
+                background: #33CC99;
+                color: white;
+                outline: 0;
+                border: 0;
+            }
+            button:hover {
+                cursor: pointer;
+                background: #44DDAA;
+            }
+            button:active {
+                background: #22BB88;
+            }
+            #logged_out button {
+                font-size: 18px;
+                padding: 12px 24px;
+                border-radius: 24px;
+            }
+            #logged_in button {
+                font-size: 14px;
+                padding: 8px 16px;
+                border-radius: 16px;
+                margin: 0 8px;
+            }
+            .footer {
+                margin-top: 32px;
+                font-size: 13px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>
+                <a target="_blank" href="https://gofastcall.com">
+                    <img src="128.png" />GoFastCall
+                </a>
+            </h1>
+            <h2>Seamlessly jump into your next meeting</h2>
+            <summary id="meetings"></summary>
+            <div class="buttons">
+                <div id="logged_out" style="display: none;">
+                    <p>To get started,</p>
+                    <button id="connect">Connect with Google Calendar</button>
+                    <p>Next, click on the extension button<br />when it's time for your meeting.</p>
+                </div>
+                <div id="logged_in" style="display: none;">
+                    <button id="refresh">Refresh</button> <button id="disconnect">Disconnect</button>
+                </div>
+            </div>
+            <div class="footer">
+                <p><a target="_blank" href="https://gofastcall.com/faq">Have questions?</a> • Created by <a target="_blank" href="https://twitter.com/stephenou">@stephenou</a></p>
+            </div>
+        </main>
+        <script src="gcal.js"></script>
+        <script src="options.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "name": "GoFastCall",
+    "version": "1.1.3",
+    "description": "One click to your next video conference call.",
+    "background": {
+        "scripts": ["gcal.js", "background.js"],
+        "persistent": true
+    },
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+    "icons": {
+        "16": "16.png",
+        "32": "32.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "permissions": ["identity"],
+    "oauth2": {
+        "client_id": "",
+        "scopes": ["https://www.googleapis.com/auth/calendar.events.readonly"]
+    },
+    "options_page": "options.html",
+    "browser_action": {},
+    "manifest_version": 2
+}
